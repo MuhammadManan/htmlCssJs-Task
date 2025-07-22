@@ -1,4 +1,4 @@
-/* style.css */
+
 * {
   margin: 0;
   padding: 0;
@@ -21,6 +21,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,12 +29,246 @@ body {
 }
 
 
-/* header {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 0;
-  text-align: center;
-  height: 30px;
+header { 
+  color: #333;
+  padding: 20px; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.logo {
+  flex: 0 0 auto;
+}
+
+img{
+  border-radius: 14px;
+  width: 369px;
+  height: 38px;
+}
+
+.search-container {
+  flex: 1;
   display: flex;
   justify-content: center;
-} */
+  padding: 0 20px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  border: 2px solid #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #fff;
+  width: 100%;
+  max-width: 500px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #333;
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+.category-divider {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-left: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+  background-color: #f8f8f8;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.3s ease;
+}
+
+.category-divider:hover {
+  background-color: #f0f0f0;
+}
+
+.category-text {
+  font-size: 14px;
+  color: #666;
+  margin-right: 8px;
+}
+
+.category-divider i {
+  font-size: 12px;
+  color: #999;
+}
+
+.search-btn {
+   border: none;
+  padding: 12px 16px;
+  cursor: pointer;
+  /* color: white; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+.search-btn i {
+  font-size: 16px;
+ }
+
+ .search-btn:hover {
+  background-color: #e6f1ae;
+  color: white;
+  transition: background-color 0.3s ease; 
+ }
+
+.cart-container{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+  min-width:280px;
+}
+
+.cross-icon, .cart-icon {
+  position: relative;
+  display: inline-block;
+}
+
+.icon-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #83b735;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 2px 5px;
+  border-radius: 10px;
+  min-width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* Navigation Bar Styles */
+.navigation-bar {
+  background-color: transparent;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-content {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.browse-category {
+  background-color: #83b735;
+  color: #333;
+  padding: 15px 20px;
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.3s ease;
+}
+
+.browse-category:hover {
+  background-color: #f0f0f0;
+}
+
+.browse-category i:first-child {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.browse-text {
+  font-size: 14px;
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+.browse-category i:last-child {
+  font-size: 12px;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav-item {
+  margin: 0;
+}
+
+.nav-item a {
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+  color: #83b735;
+}
+
+.nav-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  font-size: 14px;
+}
+
+.special-offer {
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.special-offer:hover {
+  color: #83b735;
+}
+
+.separator {
+  color: #ccc;
+  margin: 0 10px;
+}
+
+.purchase-theme {
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.purchase-theme:hover {
+  color: #83b735;
+}
